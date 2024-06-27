@@ -1,6 +1,6 @@
-import { HashMap } from '../types/types';
+import { HashMap } from '../types/types'
 
-// #3 Two Integer Sum
+// #8. Two Integer Sum
 // Given an array of integers nums and an integer target, return the indices i and j such that nums[i] + nums[j] == target and i != j.
 
 // You may assume that every input has exactly one pair of indices i and j that satisfy the condition.
@@ -23,15 +23,15 @@ import { HashMap } from '../types/types';
 // Example 3:
 
 export const twoSum = (nums: number[], target: number): number[] => {
-  const map: HashMap = {};
+  const map: HashMap = {}
   for (let i = 0; i < nums.length; i++) {
-    let complement = target - nums[i];
+    let complement = target - nums[i]
     if (map[complement] !== undefined) {
-      return [map[complement], i];
+      return [map[complement], i]
     }
-    map[nums[i]] = i;
+    map[nums[i]] = i
   }
-  return [];
-};
+  return []
+}
 
-console.log(twoSum([3, 4, 5, 6], 7));
+console.log(twoSum([3, 4, 5, 6], 7))
